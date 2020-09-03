@@ -8,7 +8,7 @@ public class HelloController {
 
     @GetMapping("/hello")
     public String get(Model model) {
-        Car car = new Car("Renault", "Megane");
+        Car car = new Car("Renault1", "Megane1");
         model.addAttribute("car", car);
         return "hello";
     }
