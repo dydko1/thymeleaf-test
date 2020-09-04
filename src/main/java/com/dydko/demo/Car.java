@@ -1,12 +1,15 @@
 package com.dydko.demo;
 
-public class Car{
+public class Car {
     private String marka;
     private String model;
 
     public Car(String marka, String model) {
         this.marka = marka;
         this.model = model;
+    }
+
+    public Car() {
     }
 
     public String getMarka() {
@@ -23,5 +26,13 @@ public class Car{
 
     public void setModel(String model) {
         this.model = model;
+    }
+
+    @Override
+    public String toString() {
+        return "Car{" +
+                "marka='" + marka + '\'' +
+                ", model='" + model + '\'' +
+                '}';
     }
 }

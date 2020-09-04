@@ -1,0 +1,21 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<H1>Hello Miro</H1>
+<tr th:each="car: ${cars}">
+    <td th:text="${car.getMarka()}"/><br>
+    <td th:text="${car.getModel()}"/>
+    <p>---------------------------</p>
+</tr>
+<p>==================</p>
+<form th:action="@{/addcar}" th:object="${newCar}" method="post">
+    <p>Marka: <input type="text" th:field="*{marka}"></p>
+    <p>Model: <input type="text" th:field="*{model}"></p>
+    <p><input type="submit" value="Add new car"></p>
+</form>
+</body>
+</html>
